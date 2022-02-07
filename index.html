@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i have no website</title>
+    <link rel="icon" href="/img/pepe.ico" type="image/x-icon"/>
+    <link rel="stylesheet"  href="css/normalize.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' media="all">
+    <!-- <link  href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' /> -->
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">
+            <div class="logo"></div>
+        </a>
+        <div id="portfolio-flters" class="nav-items">
+            <div data-filter="*" class="nav-item filter filter-active">All</div>
+            <div data-filter=".about" class="filter nav-item">About</div>
+            <div data-filter=".projects" class="filter nav-item">Projects</div>
+            <div data-filter=".media" class="filter nav-item">Media</div>
+            <div data-filter=".resume" class="filter nav-item">Resume</div>
+        </div> 
+        <a href="mailto:frayero40ok@gmail.com" class="pages__ContactButton-sc-7qvdue-5 contact">
+            <p style="line-height:normal" class="typography__Pica-sc-163cb5u-3 kmdqOL">Contact</p>
+        </a>
+    </nav>
+    <div class="wrapper">
+        <div class="cards-grid container">
+            <div class="mix about card-demo about-card">
+                    <div class="bio-container">
+                        <div  class="bio-memoji">
+                            <img id="getImage" src="./img/memoji/memoji_8.png" class="memoji" alt="">
+                        </div>
+                        <p class="bio-info">
+                            I’m <span>yurii</span>, a web-developer from Ukraine. I'm interested in Front-End, UI Design, Games, Sneakers, and Music.
+                        </p>
+                        <button class="bio-button" onclick="imagefun()">
+                            <div class="bio-button-icon" style="transform: rotate(180deg) translateZ(0px);">
+                                <svg id="Arrow_Rotate.2" class="arr" data-name="Arrow, Rotate.2" xmlns="http://www.w3.org/2000/svg" width="15.702" height="15.702" viewBox="0 0 15.702 15.702">
+                                    <g id="Group_6" data-name="Group 6" transform="translate(2.62 2.617)">
+                                    <path id="Path_5" data-name="Path 5" d="M14.8,12.032a5.229,5.229,0,0,1-9.824,2.482" transform="translate(-4.34 -6.777)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+                                    <path id="Path_6" data-name="Path 6" d="M4,9.149A5.231,5.231,0,0,1,13.83,6.731" transform="translate(-4.004 -4)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+                                    <path id="Path_7" data-name="Path 7" d="M15.953,6.952h2.313V4.639" transform="translate(-8.135 -4.221)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+                                    <path id="Path_8" data-name="Path 8" d="M6.825,15.825H4.512v2.313" transform="translate(-4.18 -8.088)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path></g>
+                                    <path id="Path_9" data-name="Path 9" d="M0,0H15.7V15.7H0Z" fill="none"></path>
+                                </svg>
+                            </div>
+                            <p class="bio-button-text">Toggle Lockdown</p>
+                        </button>
+                    </div>
+            </div>
+            <div class="mix projects card-demo  works-card">
+                <div class="case">
+                        <div class="case-header">
+                            <label class="form-label">SELECTED PROJECTS</label>
+                            <h3 class="blog-text-subtitle">click on the bubble</h3>
+                        </div>
+                        <div class="case-group">
+                            <p class="send">
+                                <a href="https://quasswexexort.github.io/halloween/" target="_blank">Halloween website</a>
+                                <span>github.com</span>
+                            </p>
+                            <p class="receive">
+                                <a href="https://quasswexexort.github.io/solar/" target="_blank">Solar exe</a><br>
+                                <span>github.com</span>
+                            </p>
+                            <p class="send">
+                                <a href="https://quasswexexort.github.io/safari/" target="_blank">Tour agency "Safari"</a>
+                                <span>github.com</span>
+                            </p>
+                            <p class="send">
+                                <a href="https://quasswexexort.github.io/Vetcare/" target="_blank">Vetcare</a> <br>
+                                <span>github.com</span>
+                            </p>
+                            <p class="receive">
+                                <a href="https://dashboardddd.netlify.app/" target="_blank">My coursework</a>
+                                <span>dashboardddd.netlify.app</span>
+                            </p>
+                            <p class="send">
+                                <a href="https://brokenportfolio.netlify.app/index.html" target="_blank">borken site</a>
+                                <span>brokenportfolio.netlify.app</span>
+                            </p>
+                            <p class="receive">
+                                <a href="https://timelesss.netlify.app/" target="_blank">design studio portfolio</a>
+                                <span>timelesss.netlify.app</span>
+                            </p>
+                        </div>
+                </div> 
+            </div>
+            <div class="mix about card-demo location-card"> 
+                <div id='map'></div>                
+                    <div class="Map__Container-sc-12s41qg-0 map-container">
+                        <div class="Map__MapContainer-sc-12s41qg-6 dtaBVa"></div>
+                        <div class="Map__Marker-sc-12s41qg-1 joXAlg">
+                                <div class="Map__MemojiWrapper-sc-12s41qg-2 map-img">
+                                    <div style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
+                                        <div style="box-sizing:border-box;display:block;max-width:100%">
+                                            <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="" aria-hidden="true" role="presentation" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" />
+                                        </div>
+                                        <img
+                                            src="img/memoji/memoji_14.png"
+                                            decoding="async" class="Map__Memoji-sc-12s41qg-3 gkBnfx"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" 
+                                        />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mix about card-demo instagram-card">  
+                <div class="twitter">
+
+                    <svg class="twitter-svg" viewBox="0 0 511 511.9" width="85px"height="80px" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
+                        <path
+                            d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" />
+                        <path
+                            d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
+                    </svg>
+                    <a href="https://www.instagram.com/frayer559/" target="_blank" class="link-arrow">
+                        <svg id="Arrow.7" class="arr" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256" viewBox="0 0 18.256 18.256" style="transition: all 0.3s ease 0s;">
+                            <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581" transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                </path>
+                                <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287" transform="translate(-7.756 -7)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                </path>
+                            </g>
+                            <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none">
+                            </path>
+                        </svg>
+                    </a>
+                </div> 
+            </div>
+            <div class="mix about card-demo telegram-card"> 
+                <div class="twitter">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="twitter-svg" width="75.121" height="61.052" viewBox="0 0 75.121 61.052" class="TwitterSVG__SVG-sc-1towu9w-0 juCkzD"><path id="icons8-twitter" d="M75.063,12.844a30.83,30.83,0,0,1-8.858,2.43A15.451,15.451,0,0,0,72.984,6.75,30.947,30.947,0,0,1,63.2,10.485,15.418,15.418,0,0,0,36.937,24.542,43.765,43.765,0,0,1,5.17,8.441,15.445,15.445,0,0,0,9.94,29.019a15.4,15.4,0,0,1-6.984-1.932v.193A15.438,15.438,0,0,0,15.317,42.4a15.421,15.421,0,0,1-4.057.538,14.847,14.847,0,0,1-2.9-.28,15.447,15.447,0,0,0,14.4,10.709,30.9,30.9,0,0,1-19.14,6.595,30.3,30.3,0,0,1-3.671-.217A43.544,43.544,0,0,0,23.56,66.666c28.348,0,43.852-23.483,43.852-43.846,0-.667-.018-1.341-.04-2a31.325,31.325,0,0,0,7.692-7.98Z" transform="translate(0.058 -5.614)"></path></svg> -->
+                    <svg class="twitter-svg" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="85px" height="80px">
+                        <path d="M39.175,10.016c1.687,0,2.131,1.276,1.632,4.272c-0.571,3.426-2.216,14.769-3.528,21.83 c-0.502,2.702-1.407,3.867-2.724,3.867c-0.724,0-1.572-0.352-2.546-0.995c-1.32-0.872-7.984-5.279-9.431-6.314 c-1.32-0.943-3.141-2.078-0.857-4.312c0.813-0.796,6.14-5.883,10.29-9.842c0.443-0.423,0.072-1.068-0.42-1.068 c-0.112,0-0.231,0.034-0.347,0.111c-5.594,3.71-13.351,8.859-14.338,9.53c-0.987,0.67-1.949,1.1-3.231,1.1 c-0.655,0-1.394-0.112-2.263-0.362c-1.943-0.558-3.84-1.223-4.579-1.477c-2.845-0.976-2.17-2.241,0.593-3.457 c11.078-4.873,25.413-10.815,27.392-11.637C36.746,10.461,38.178,10.016,39.175,10.016 M39.175,7.016L39.175,7.016 c-1.368,0-3.015,0.441-5.506,1.474L33.37,8.614C22.735,13.03,13.092,17.128,6.218,20.152c-1.074,0.473-4.341,1.91-4.214,4.916 c0.054,1.297,0.768,3.065,3.856,4.124l0.228,0.078c0.862,0.297,2.657,0.916,4.497,1.445c1.12,0.322,2.132,0.478,3.091,0.478 c1.664,0,2.953-0.475,3.961-1.028c-0.005,0.168-0.001,0.337,0.012,0.507c0.182,2.312,1.97,3.58,3.038,4.338l0.149,0.106 c1.577,1.128,8.714,5.843,9.522,6.376c1.521,1.004,2.894,1.491,4.199,1.491c2.052,0,4.703-1.096,5.673-6.318 c0.921-4.953,1.985-11.872,2.762-16.924c0.331-2.156,0.603-3.924,0.776-4.961c0.349-2.094,0.509-4.466-0.948-6.185 C42.208,7.875,41.08,7.016,39.175,7.016L39.175,7.016z"/>
+                    </svg>
+                    <a href="https://t.me/buysometime" target="_blank" class="link-arrow">
+                        <svg id="Arrow.7" class="arr" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256" viewBox="0 0 18.256 18.256">
+                            <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581" transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                </path>
+                                <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287" transform="translate(-7.756 -7)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                </path>
+                            </g>
+                            <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mix card-demo dark-theme-card "> 
+                <div class="dark-theme-toggler">
+                    <div id="dark-btn">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mix media card-demo about-3"> 
+                <div class="blog">
+                    <div class="blog-text">
+                        <h2 class="blog-text-title">Photo Album</h2>
+                        <h3 class="blog-text-subtitle">A collection of moods & stories</h3>
+                        <p class="blog-text-paragraph">I love photography, I'm not a professional photographer, but I love to enjoy pictures, especially in square mode on  iphone.</p>
+                    </div>
+                    <div class="blog-footer">
+                        <button id="photo" onClick='location.href="./gallery.html"' class="blog-button transition">
+                            <svg class="arr" id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256" viewBox="0 0 18.256 18.256" style="transition: all 0.3s ease 0s;">
+                                <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                    <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581" transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287" transform="translate(-7.756 -7)" fill="none" stroke="#0D1117" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                                <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                            </svg>
+                            <p class="blog-button-text" style="line-height: normal;">Read more</p>
+                        </button>
+                        <svg class="camera-svg" width="34" height="34" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 8C4.89543 8 4 8.89543 4 10V17C4 18.1046 4.89543 19 6 19H18C19.1046 19 20 18.1046 20 17V10C20 8.89543 19.1046 8 18 8H17.0704C16.4017 8 15.7772 7.6658 15.4063 7.1094L14.5937 5.8906C14.2228 5.3342 13.5983 5 12.9296 5H11.0704C10.4017 5 9.7772 5.3342 9.40627 5.8906L8.59373 7.1094C8.2228 7.6658 7.59834 8 6.92963 8H6ZM12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/>
+                            <path d="M15.4063 7.1094L16.0303 6.69338L16.0303 6.69338L15.4063 7.1094ZM14.5937 5.8906L13.9697 6.30662L13.9697 6.30662L14.5937 5.8906ZM9.40627 5.8906L10.0303 6.30662L10.0303 6.30662L9.40627 5.8906ZM8.59373 7.1094L7.9697 6.69338L7.96969 6.69338L8.59373 7.1094ZM4.75 10C4.75 9.30964 5.30964 8.75 6 8.75V7.25C4.48122 7.25 3.25 8.48122 3.25 10H4.75ZM4.75 17V10H3.25V17H4.75ZM6 18.25C5.30964 18.25 4.75 17.6904 4.75 17H3.25C3.25 18.5188 4.48122 19.75 6 19.75V18.25ZM18 18.25H6V19.75H18V18.25ZM19.25 17C19.25 17.6904 18.6904 18.25 18 18.25V19.75C19.5188 19.75 20.75 18.5188 20.75 17H19.25ZM19.25 10V17H20.75V10H19.25ZM18 8.75C18.6904 8.75 19.25 9.30964 19.25 10H20.75C20.75 8.48122 19.5188 7.25 18 7.25V8.75ZM17.0704 8.75H18V7.25H17.0704V8.75ZM14.7822 7.52543C15.2923 8.29047 16.1509 8.75 17.0704 8.75V7.25C16.6524 7.25 16.2621 7.04112 16.0303 6.69338L14.7822 7.52543ZM13.9697 6.30662L14.7822 7.52543L16.0303 6.69338L15.2178 5.47457L13.9697 6.30662ZM12.9296 5.75C13.3476 5.75 13.7379 5.95888 13.9697 6.30662L15.2178 5.47457C14.7077 4.70953 13.8491 4.25 12.9296 4.25V5.75ZM11.0704 5.75H12.9296V4.25H11.0704V5.75ZM10.0303 6.30662C10.2621 5.95888 10.6524 5.75 11.0704 5.75V4.25C10.1509 4.25 9.29226 4.70953 8.78223 5.47457L10.0303 6.30662ZM9.21777 7.52543L10.0303 6.30662L8.78223 5.47457L7.9697 6.69338L9.21777 7.52543ZM6.92963 8.75C7.8491 8.75 8.70774 8.29047 9.21777 7.52543L7.96969 6.69338C7.73786 7.04112 7.34757 7.25 6.92963 7.25V8.75ZM6 8.75H6.92963V7.25H6V8.75ZM15.25 13C15.25 14.7949 13.7949 16.25 12 16.25V17.75C14.6234 17.75 16.75 15.6234 16.75 13H15.25ZM12 9.75C13.7949 9.75 15.25 11.2051 15.25 13H16.75C16.75 10.3766 14.6234 8.25 12 8.25V9.75ZM8.75 13C8.75 11.2051 10.2051 9.75 12 9.75V8.25C9.37665 8.25 7.25 10.3766 7.25 13H8.75ZM12 16.25C10.2051 16.25 8.75 14.7949 8.75 13H7.25C7.25 15.6234 9.37665 17.75 12 17.75V16.25Z"/>
+                        </svg>           
+                    </div>
+                </div>
+            </div>
+            <div class="mix about card-demo music-card"> 
+                <div class="apple-music-container">
+                    <img src="./img/apple-music.svg" class="apple-music-logo" alt="">
+                    <div class="apple-music-meta">
+                        <div class="apple-music-now">
+                            <div class="playing-indicator-container">
+                                <div class="playing-indicator"></div>
+                                <div class="playing-indicator"></div>
+                                <div class="playing-indicator"></div>
+                            </div>
+                            <p class="apple-music-typography">my playlist</p>
+                        </div>
+                        <h2 class="apple-music-title">song`s like American style</h2>
+                    </div>
+                    <a href="https://music.apple.com/ua/playlist/america/pl.u-DdANrvqTa4reeRg?l=uk" target="_blank" class="music-link-arrow">
+                        <svg id="Arrow.7" class="arr" height="18.256" width="18.256"  version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/></svg>
+                    </a>
+                </div>
+                <!-- <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="100%" style="width:100%;max-width:660px;overflow:hidden;background:transparent;border-radius: 32px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ua/playlist/america/pl.u-DdANrvqTa4reeRg?l=uk"></iframe> -->
+            </div>
+            <div class="mix resume card-demo resume-card">
+                <div class="black-box w-container">
+                    <div class="w-layout-grid black-box--grid">
+                        <div class="black-box--content">
+                            <div class="black-box--text myText">Resume</div>
+                        </div>
+                        <div class="black-box--right">
+                            <a href="./img/Resume.pdf" download class="black-box--button w-button">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mix projects card-demo quote"> 
+                <div class="blog-quote">
+                    <div class="blog-text">
+                        <p class="blog-quote-paragraph"><q>Un artista copia, un gran artista roba</q></p>
+                    </div>
+                    <img src="./img/left.png" alt="" class="left-hand">
+                    <img src="./img/right.png" alt="" class="right-hand">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZnJheWVyNTU5IiwiYSI6ImNrdG5la3YzaTAyMjcydW9hdTJnOWI2a3UifQ.TKJHjwVKLsC1CZObPqwwKQ';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        center: [25.566468, 49.546346],
+        zoom: 12 ,
+        style: 'mapbox://styles/frayer559/ckto8eqaf10t018kkikenxt0v?optimize=true'
+        });
+    </script>
+</body>
+</html>
