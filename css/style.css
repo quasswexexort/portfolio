@@ -1256,6 +1256,7 @@ label {
     animation-timing-function: linear;
     animation-name: fluid;
     background-size: 500%;
+    -webkit-box-decoration-break: clone;
 }
 
 
