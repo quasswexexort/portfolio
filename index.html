@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>i have no website</title>
-    <link rel="icon" href="/img/pepe.ico" type="image/x-icon"/>
-    <link rel="stylesheet"  href="css/normalize.css" media="all">
+    <link rel="shortcut icon" href="/img/memoji/memoji_14.png" />
+    <meta name="title" content="Yurii - Веб-розробник">
+    <meta name="description" content="Створюю красиві і зручні сайти, люблю дизайн, класні кросівки і доту.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Yurii - Веб-розробник">
+    <meta property="og:description" content="Створюю красиві і зручні сайти, люблю дизайн, класні кросівки і доту.">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Yurii - Веб-розробник">
+    <meta property="twitter:description" content="Створюю красиві і зручні сайти, люблю дизайн, класні кросівки і доту.">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="preload" href="fonts/Silka-Regular.woff" as="font" crossorigin="" />
+    <link rel="preload" href="fonts/Silka-RegularItalic.woff" as="font" crossorigin="" />
+    <link rel="preload" href="fonts/Greentea-GOYVa.woff" as="font" crossorigin="" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' >
     <link rel="stylesheet" href="css/style.css" media="all">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' media="all">
-    <!-- <link  href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' /> -->
+    <link rel="stylesheet"  href="css/normalize.css" media="all">
+
 </head>
 <body>
     <nav class="navbar">
@@ -35,7 +53,7 @@
                             <img id="getImage" src="./img/memoji/memoji_8.png" class="memoji" alt="">
                         </div>
                         <p class="bio-info">
-                            I’m <span>yurii</span>, a web-developer from Ukraine. I'm interested in Front-End, UI Design, Games, Sneakers, and Music.
+                            I’m <span>yurii</span>, a web-developer from Ukraine. I like Front-End, UI Design, Books(fav:Gabriel García Márquez), Games, Sneakers, and Music.
                         </p>
                         <button class="bio-button" onclick="imagefun()">
                             <div class="bio-button-icon" style="transform: rotate(180deg) translateZ(0px);">
@@ -92,19 +110,14 @@
             </div>
             <div class="mix about card-demo location-card"> 
                 <div id='map'></div>                
-                    <div class="Map__Container-sc-12s41qg-0 map-container">
-                        <div class="Map__MapContainer-sc-12s41qg-6 dtaBVa"></div>
-                        <div class="Map__Marker-sc-12s41qg-1 joXAlg">
-                                <div class="Map__MemojiWrapper-sc-12s41qg-2 map-img">
-                                    <div style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-                                        <div style="box-sizing:border-box;display:block;max-width:100%">
-                                            <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="" aria-hidden="true" role="presentation" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" />
-                                        </div>
-                                        <img
-                                            src="img/memoji/memoji_14.png"
-                                            decoding="async" class="Map__Memoji-sc-12s41qg-3 gkBnfx"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" 
-                                        />
+                <div class="map-container">
+                    <div class="map-circle">
+                        <div class="map-img">
+                            <div class="map-img-2">
+                                <div style="box-sizing:border-box;display:block;max-width:100%">
+                                    <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="" aria-hidden="true" role="presentation" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" />
+                                </div>
+                                <img src="img/memoji/memoji_14.png" decoding="async" alt="" class="map-memoji"/>
                             </div>
                         </div>
                     </div>
@@ -112,7 +125,6 @@
             </div>
             <div class="mix about card-demo instagram-card">  
                 <div class="twitter">
-
                     <svg class="twitter-svg" viewBox="0 0 511 511.9" width="85px"height="80px" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
@@ -205,17 +217,13 @@
                         <svg id="Arrow.7" class="arr" height="18.256" width="18.256"  version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/></svg>
                     </a>
                 </div>
-                <!-- <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="100%" style="width:100%;max-width:660px;overflow:hidden;background:transparent;border-radius: 32px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ua/playlist/america/pl.u-DdANrvqTa4reeRg?l=uk"></iframe> -->
             </div>
-            <div class="mix resume card-demo resume-card">
-                <div class="black-box w-container">
-                    <div class="w-layout-grid black-box--grid">
-                        <div class="black-box--content">
-                            <div class="black-box--text myText">Resume</div>
-                        </div>
-                        <div class="black-box--right">
-                            <a href="./img/Resume.pdf" download class="black-box--button w-button">Download</a>
-                        </div>
+            <div class="mix resume card-demo resume-card resume-container">
+                <div class="pure-dialog-container">
+                    <div class="pure-dialog-title">Resume</div>
+                    <div class="pure-dialog-buttons">
+                        <a href="./img/Resume.pdf" download class="pure-dialog-button">Download</a>
+                        <a href="./img/Resume.pdf" target="_blank" class="pure-dialog-button">Open in new tab</a>
                     </div>
                 </div>
             </div>
@@ -224,8 +232,8 @@
                     <div class="blog-text">
                         <p class="blog-quote-paragraph"><q>Un artista copia, un gran artista roba</q></p>
                     </div>
-                    <img src="./img/left.png" alt="" class="left-hand">
-                    <img src="./img/right.png" alt="" class="right-hand">
+                    <img src="img/left.webp" alt="" class="left-hand">
+                    <img src="img/right.webp" alt="" class="right-hand">
                 </div>
             </div>
         </div>
@@ -233,7 +241,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer=""></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiZnJheWVyNTU5IiwiYSI6ImNrdG5la3YzaTAyMjcydW9hdTJnOWI2a3UifQ.TKJHjwVKLsC1CZObPqwwKQ';

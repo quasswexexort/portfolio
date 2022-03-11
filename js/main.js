@@ -25,14 +25,13 @@ $(document).ready(function() {
 
 //Анімація появи блоків на сайті і при переході на іншу сторінку
 $(document).ready(function() {
-  $("body").css("display", "none");
 
-  $("body").fadeIn(2000);
+$("body").addClass('b-show');
 
 $("button.transition").click(function(event){
   event.preventDefault();
   linkLocation = this.href;
-  $("body").fadeOut(2000, redirectPage);
+  // $("body").addClass('b-show', redirectPage);
 });
 
 function redirectPage() {
@@ -40,40 +39,33 @@ function redirectPage() {
 }
 });
 
+//перемикає темну тему
+var darkBtn = document.getElementById("dark-btn");
+darkBtn.onclick  = function(){
+darkBtn.classList.toggle("dark-btn-on");
+document.body.classList.toggle("dark-theme");
 
+if(localStorage.getItem("theme") == "light") {
+    localStorage.setItem("theme", "dark");
+}
+else{
+    localStorage.setItem("theme", "light");
+}
+}
 
-
-
-  //перемикає темну тему
-  var darkBtn = document.getElementById("dark-btn");
-  darkBtn.onclick  = function(){
-  darkBtn.classList.toggle("dark-btn-on")
-  document.body.classList.toggle("dark-theme");
-  
-  if(localStorage.getItem("theme") == "light") {
-      localStorage.setItem("theme", "dark");
-  }
-  else{
-      localStorage.setItem("theme", "light");
-  }
-  }
-  
-  // remembers the theme of the site
-  // запам'ятовує яка тема на сайті 17.08.2021
-  if(localStorage.getItem("theme") == "light") {
-  darkBtn.classList.remove("dark-btn-on");
-  document.body.classList.remove("dark-theme");
-  }
-  else if(localStorage.getItem("theme") == "dark") {
-  darkBtn.classList.add("dark-btn-on");
-  document.body.classList.add("dark-theme");
-  }
-  else{
-  localStorage.setItem("theme", "light");
-  }
-
-
-
+// remembers the theme of the site
+// запам'ятовує яка тема на сайті 17.08.2021
+if(localStorage.getItem("theme") == "light") {
+darkBtn.classList.remove("dark-btn-on");
+document.body.classList.remove("dark-theme");
+}
+else if(localStorage.getItem("theme") == "dark") {
+darkBtn.classList.add("dark-btn-on");
+document.body.classList.add("dark-theme");
+}
+else{
+localStorage.setItem("theme", "light");
+}
 
 
 //Change image onclick, toggle button
@@ -142,13 +134,3 @@ if (containerEl) {
     });
 }
 
-// var mixer = mixitup('.container');
-// var mixer = mixitup({
-//     selectors: {
-//         target: '.card-demo'
-//     },
-//     animation: {
-//         duration: 200,
-//         effects: 'fade scale(0.5)'
-//     }
-// });
